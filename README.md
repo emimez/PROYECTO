@@ -1,2 +1,2 @@
 # PROYECTO
-Repositorio para el pryecto de fundamentos de programacion
+Repositorio para el proyecto de fundamentos de programacion
