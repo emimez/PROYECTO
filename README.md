@@ -4,22 +4,28 @@ Decidi como proyecto desarrollar un simulador de supervivencia en un apocalipsis
 El jugador debera administrar recurrsos, enfrentarse o escapar de zombies y tomar decisiones para intentar sobrevivir a la mayor cantidad de dias posibles. Al terminar el juego el programa demostrara los dias sobrevivios, los zombies eliminados y una puntuacion final.
 Considero que este proyecto es de valor por que al ser hecho sobre eventos aleatorios y toma de decisiones, me obliga a usar elementos de programación que ya se me han sido instruidos como variables, condicionales, ciclos, funciones y listas
 # ALGORITMO
+
 ENTRADAS
-Nombre del jugador 
-Vida 
-Comida
-Agua 
-Municion
-Medicinas
-Dias_sobrevividos
-Zombies 
-Opciones para cada situacion:
-Pelear 
-Escapar
-Explorar
-Descansar
+
+-Nombre del jugador 
+-Vida 
+-Comida
+-Agua 
+-Municion
+-Medicinas
+-Dias_sobrevividos
+-Zombies 
+-Opciones para cada situacion:
+
+---Pelear 
+---Escapar
+---Explorar
+---Descansar
+
 PROCESOS
+
 Asignar valores a las variables:
+
   Asignar 100 a "vida"
   Asignar 5 a "comida"
   Asignar 5 a "agua"
@@ -28,7 +34,9 @@ Asignar valores a las variables:
   Asignar 0 a "dias_Sobrevividos"
   Asignar 0 a "zombies_derrotados"
   estadísticas = [vida, comida, agua, municion, medicinas, dias_sobrevividos, zombies_derrotados]
+  
 Mientras vida > 0:
+
   dias_sobrevividos = "dias_sobrevividos" + 1
   Mostras "estadisticas"
   Generar una situacion random
@@ -57,6 +65,7 @@ Sino entonces Comprobar si el jugador puede continuar
 Si "vida" = 0
 entonces desplegar "Game Over"
 si no desplegar "continuar el juego"
+
 SALIDAS
 Nombre del jugador
 Dias sobrevividos
