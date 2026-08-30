@@ -1,6 +1,6 @@
 # PROYECTO
 Repositorio para el proyecto de fundamentos de programación
-Decidi como proyecto desarrolar un simulador de supervivencia en un aocalipsis zombie en el que el usuario controle a un personaje y tome decisiones durante diferentes situaciones, con eventos aleatorios que pueden o beneficiar o perjudicar al jugador dependiendo de la suerte.
+Decidi como proyecto desarrollar un simulador de supervivencia en un apocalipsis zombie en el que el usuario controle a un personaje y tome decisiones durante diferentes situaciones, con eventos aleatorios que pueden o beneficiar o perjudicar al jugador dependiendo de la suerte.
 El jugador debera administrar recurrsos, enfrentarse o escapar de zombies y tomar decisiones para intentar sobrevivir a la mayor cantidad de dias posibles. Al terminar el juego el programa demostrara los dias sobrevivios, los zombies eliminados y una puntuacion final.
 Considero que este proyecto es de valor por que al ser hecho sobre eventos aleatorios y toma de decisiones, me obliga a usar elementos de programación que ya se me han sido instruidos como variables, condicionales, ciclos, funciones y listas
 # ALGORITMO
