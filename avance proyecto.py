@@ -1,49 +1,60 @@
 import random
-def mostrar_estadisticas(nombre, estadisticas):
-    Vida, comida, agua, municion, medicinas, dias, zombies = estadisticas
+import time
+def ImprimirLento(texto):
+    for caracter in texto:
+        print(caracter, end='', flush=True)
+        time.sleep(0.05)
+
+    print()
+        
+def mostrar_estadisticas(nombre, Vida, zombies, dias):
     print("\n--- ESTADO DE", nombre.upper(), "(Dia", dias, ") ---")
-    print("Vida:", Vida)
-    print("Comida:", comida, "| Agua:", agua)
-    print("Municion:", municion, "| Medicinas:", medicinas)
-    print("Zombies derrotados:", zombies)
-    print("-----------------------------------")
+    ImprimirLento("Vida: " + str(Vida))
+    ImprimirLento("Comida: " + str(comida) + " | Agua: " + str(agua))
+    ImprimirLento("Municion: " + str(municion) + " | Medicinas: " + str(medicinas))
+    ImprimirLento("Zombies derrotados: " + str(zombies))
+    ImprimirLento("-----------------------------------")
 nombre = input("Escribe tu nombre: ")
-mostrar_estadisticas(nombre, (100, 50, 75, 20, 3, 1, 0))
-Vida, comida, agua, municion, medicinas, dias, zombies = (100, 50, 75, 20, 3, 1, 0)
+Vida = 100
+estadisticas = [random.randint(10, 40) for _ in range(4)]
+comida, agua, municion, medicinas = estadisticas
+mostrar_estadisticas(nombre, Vida, 0, 1)
+dias, zombies = (1, 0)
 while Vida > 0:
     dias += 1
-    mostrar_estadisticas(nombre, (Vida, comida, agua, municion, medicinas, dias, zombies))
+    mostrar_estadisticas(nombre, Vida, zombies, dias)
     Suministros = ["agua", "comida", "municion", "medicinas", "nada"]
     suministro = random.choice(Suministros)
     if suministro == "agua":
         agua += 10
-        print("Encontraste agua! +10") 
+        ImprimirLento("Encontraste agua! +10")
     elif suministro == "comida":
         comida += 10
-        print("Encontraste comida! +10")
+        ImprimirLento("Encontraste comida! +10")
     elif suministro == "municion":
         municion += 5
-        print("Encontraste municion! +5")
+        ImprimirLento("Encontraste municion! +5")
     elif suministro == "medicinas":
         medicinas += 1
-        print("Encontraste medicinas! +1")
+        ImprimirLento("Encontraste medicinas! +1")
     elif suministro == "nada":
-        print("No encontraste nada...")
+        ImprimirLento("No encontraste nada...")
+    time.sleep(1)
     if random.choice([True, False]):
-        print("Un zombie te ataca!")
+        ImprimirLento("Un zombie te ataca!")
     atacar = input("atacar o huir? ")
     if atacar == "atacar":
         if municion > 0:
-            municion -= 1
-            print("Disparaste a un zombie! -1 municion")
+            municion -= 5
+            ImprimirLento("Disparaste a un zombie! -5 municion")
             zombies += 1
         else:
-            print("No tienes municion!")
-            Vida-=20
+            ImprimirLento("No tienes municion!")
+            Vida-= 20
     elif atacar == "huir":
         Vida -= 20
-        print("Huiste del zombie!")
+        ImprimirLento("Huiste del zombie!")
+    time.sleep(1)
     Vida -= 10
-
         
         
